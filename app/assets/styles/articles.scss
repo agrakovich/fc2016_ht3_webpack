@@ -1,0 +1,84 @@
+@import "variables";
+
+.error, .info{
+  margin-top:30px;
+  width: 100%;
+}
+.error{
+  border: 2px solid $errorColor;
+  color: $errorColor;
+}
+.info{
+  border: 2px solid $infoColor;
+  color: $infoColor;
+}
+.error .message, .info .message{
+  margin-left: 30px;
+  padding-bottom: 15px;
+  font-size: 1.21em;
+}
+.error .label, .info .label{
+  font-weight: bold;
+  font-size: 0.8em;
+  padding-top :15px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+article{
+  margin: 10px 0;
+  display: block;
+
+  .image{
+    float: left;
+    margin: 0 10px;
+    width: 30%;
+
+    img{
+      height: auto;
+      width: 100%;
+    }
+  }
+  .asset{
+    &:after {
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color:$blackColor;
+      font-family: $baseFont;
+    }
+
+    h3{
+      &:hover {
+        color: $baseColor;
+      }
+
+      font-size: 1.294em;
+      line-height: 1.1em;
+      text-transform: none;
+      font-family: Panton,sans-serif;
+      font-weight: 600;
+      letter-spacing: -.009em;
+    }
+
+    p{
+      font-size: .941em;
+      line-height: 1.25em;
+    }
+
+    .publishat{
+      font-weight: bold;
+      font-size: 0.7em;
+    }
+
+    .byline{
+      font-weight: bold;
+      font-size: 0.8em;
+      color: $hoverColor;
+    }
+  }
+}
