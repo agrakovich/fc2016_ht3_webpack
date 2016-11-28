@@ -1,0 +1,61 @@
+@import "variables";
+#wrapper{
+    max-width: 960px;
+    margin: auto;
+}
+
+#show-news-button{
+  color: $whiteTextColor;
+  background: $baseColor;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-left: 5px;
+  margin-top: 50px;
+  font-family: Arial,sans-serif;
+  border-radius: 4px;
+  border: solid 0 #e3edf4;
+  border-bottom: 2px solid $baseColorBorder;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $baseColorBorder;
+  }
+
+  &:focus {
+    outline:0;
+  }
+}
+
+header {
+    color: $baseColor;
+    font-size: 2.32em;
+    line-height: 1.1em;
+    font-family: $baseFont;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 20px;
+
+    sup {
+        font-size: 0.4em;
+    }
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $baseColor;
+
+        &:hover{
+          color: $hoverColor;
+        }
+    }
+}
+
+footer{
+    color: $greyColor;
+    font-size: 0.7em;
+    text-align: center;
+    margin: 35px auto;
+}
+
