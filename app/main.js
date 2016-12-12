@@ -1,20 +1,13 @@
 import './assets/styles/app.scss'
-const config = {
-    newsUrl: 'https://newsapi.org/v1/articles?source=bbc-news&apiKey=e4f61131ae2a4c888846c71d56ebb5c0',
-    newsElementId: 'articles',
-    newsButtonId: 'show-news-button'
-};
+import './assets/styles/articles.scss'
 
-const showNewsButton = document.getElementById(config.newsButtonId);
-const testJson = require("../test-data/test.json");
+import NewsView from './js/flux/newsView'
+import Dispatcher from './js/flux/dispatcher'
+import { NewsStore } from './js/flux/newsStore'
+import { getNews } from './js/flux/newsActions'
 
-console.log(testJson);
 
-showNewsButton.onclick = () => {
-    require.ensure([], (require) => {
-        let appClass = require('./js/newsApplication');
-        require('./assets/styles/articles.scss');
-        let app = new appClass.NewsApplication(config);
-        app.run();
-    }, 'articles');
-};
+const { createSubscriber } = Dispatcher.create();
+const newsStoreSubscriber = createSubscriber(NewsStore);
+NewsView(newsStoreSubscriber, 'articles');
+getNews();

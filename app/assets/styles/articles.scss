@@ -12,6 +12,15 @@
   border: 2px solid $infoColor;
   color: $infoColor;
 }
+.loader{
+  padding-top: 15px;
+  color: $baseColor;
+  text-align: center;
+
+  img {
+    margin: 0 50%;
+  }
+}
 .error .message, .info .message{
   margin-left: 30px;
   padding-bottom: 15px;

@@ -6,10 +6,17 @@ class TemplateBuilder{
         this.htmlHelper = new HtmlHelper();
     }
 
-    getInfoHtml(){
+    getInfoHtml(infoMessage){
         return this.htmlHelper.renderHtml`<div class="info">
                     <div class="label">Info:</div>
                     <div class="message">${infoMessage}</div>
+                </div>`;
+    }
+
+    getLoaderHtml(loaderMessage){
+        return this.htmlHelper.renderHtml`<div class="loader">                    
+                    <div class="message">${loaderMessage}</div>
+                    <img src="app/assets/images/ring.svg">
                 </div>`;
     }
 
